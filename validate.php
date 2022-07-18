@@ -28,10 +28,9 @@
         }
         else {
             $email = $_POST["email"];
-        }
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            $emailErr = "The email address is incorrect";
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $emailErr = "The email address is incorrect";
+            }
         }
 
         if (empty($_POST["website"])){
