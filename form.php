@@ -26,7 +26,7 @@
 ?>
 
 <h2>Form Validation </h2>
-<form method = "POST" action = " <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
+<form method = "POST" action = " <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 Full Name: <input type = "text" name = "name">
 <br> <br>
 E-mail: <input type = "text" name = "email">
