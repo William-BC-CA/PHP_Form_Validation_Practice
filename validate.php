@@ -16,7 +16,7 @@
                 $nameErr = "Please enter a valid name";
             }
             else {
-                $nameErr = $_POST["name"];
+                $name = $_POST["name"];
                 if (!preg_match("/^[a-zA-Z-']*$/", $name)){
                     $nameErr = "Only letters and white spaces allowed";
                 }
