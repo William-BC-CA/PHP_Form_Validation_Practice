@@ -21,40 +21,40 @@
                     $nameErr = "Only letters and white spaces allowed";
                 }
             }
-        }
 
-        if(empty($_POST["email"])){
-            $emailErr = "Valid Email Address";
-        }
-        else {
-            $email = $_POST["email"];
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                $emailErr = "The email address is incorrect";
+            if(empty($_POST["email"])){
+                $emailErr = "Valid Email Address";
             }
-        }
-
-        if (empty($_POST["website"])){
-            $website = "";
-        }
-        else {
-            $website = $_POST["website"];
-            if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $website)){
-                $websiteErr = "Enter a valid Website URL";
+            else {
+                $email = $_POST["email"];
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                    $emailErr = "The email address is incorrect";
+                }
             }
-        }
 
-        if (empty($_POST["comment"])){
-            $comment = "";
-        }
-        else {
-            $comment = $_POST["comment"];
-        }
+            if (empty($_POST["website"])){
+                $website = "";
+            }
+            else {
+                $website = $_POST["website"];
+                if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $website)){
+                    $websiteErr = "Enter a valid Website URL";
+                }
+            }
 
-        if (empty($_POST["gender"])){
-            $gender = "Please select a gender";
-        }
-        else {
-            $gender = $_POST["gender"];
+            if (empty($_POST["comment"])){
+                $comment = "";
+            }
+            else {
+                $comment = $_POST["comment"];
+            }
+
+            if (empty($_POST["gender"])){
+                $gender = "Please select a gender";
+            }
+            else {
+                $gender = $_POST["gender"];
+            }
         }
     ?>
 
