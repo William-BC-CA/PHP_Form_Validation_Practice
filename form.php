@@ -10,14 +10,14 @@
     $fullname = $email = $gender = $comment = $number = $age = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $fullname = test_input($_POST["fullname"]);
+        $fullname = test_input($_POST["name"]);
         $email = test_input($_POST["email"]);
         $number = test_input($_POST["number"]);
         $comment = test_input($_POST["gender"]);
         $gender = test_input($_POST["age"]);
     }
 
-    function test_input($data){
+    function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
