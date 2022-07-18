@@ -10,19 +10,24 @@
     $fullname = $email = $gender = $comment = $number = $age = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $fullname = test_input($_POST["name"]);
-        $email = test_input($_POST["email"]);
-        $number = test_input($_POST["number"]);
-        $comment = test_input($_POST["gender"]);
-        $gender = test_input($_POST["age"]);
+        // $fullname = test_input($_POST["name"]);
+        // $email = test_input($_POST["email"]);
+        // $number = test_input($_POST["number"]);
+        // $comment = test_input($_POST["gender"]);
+        // $gender = test_input($_POST["age"]);
+        $fullname = $_POST["name"];
+        $email = $_POST["email"];
+        $number = $_POST["number"];
+        $comment = $_POST["gender"];
+        $gender = $_POST["age"];
     }
 
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return data;
-    }
+    // function test_input($data) {
+    //     $data = trim($data);
+    //     $data = stripslashes($data);
+    //     $data = htmlspecialchars($data);
+    //     return data;
+    // }
 ?>
 
 <h2>Form Validation </h2>
